@@ -10,7 +10,6 @@ namespace :dev do
       FileUtils.touch 'tmp/caching-dev.txt'
       puts 'Development mode is now being cached.'
     end
-  
     FileUtils.touch 'tmp/restart.txt'
   end
 end
