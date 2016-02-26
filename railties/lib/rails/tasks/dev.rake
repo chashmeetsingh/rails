@@ -1,9 +1,7 @@
 namespace :dev do
   desc 'Toggle development mode caching on/off'
   task :cache do
-    if not Dir.exist? 'tmp'
-      FileUtils.mkdir_p('tmp')
-    end
+    FileUtils.mkdir_p('tmp')
   
     if File.exist? 'tmp/caching-dev.txt'
       File.delete 'tmp/caching-dev.txt'
