@@ -4,5 +4,6 @@ task :restart do
   FileUtils.touch('tmp/restart.txt')
   Kernel.exec 'pkill', 'ruby'
   Sleep(20)
+  puts "here"
   Kernel.exec 'rails', 'server'
 end
