@@ -3,6 +3,6 @@ task :restart do
   FileUtils.mkdir_p('tmp')
   FileUtils.touch('tmp/restart.txt')
   Kernel.exec 'pkill', 'ruby'
-  Sleep(100)
+  Sleep(20)
   system 'rails server'
 end
